@@ -1,0 +1,118 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
+  "settings": {
+    "import/core-modules": [
+      "styled-jsx/css"
+    ]
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "react/jsx-one-expression-per-line": 0,
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "import/no-unresolved": "off",
+    "import/no-dynamic-require": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "no-use-before-define": "off",
+    "global-require": "off",
+    "space-before-function-paren": [
+      "error",
+      "always"
+    ],
+    "max-len": [
+      1,
+      150,
+      2,
+      {
+        "ignoreComments": true
+      }
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-indent": [
+      2,
+      2,
+      {
+        "checkAttributes": false
+      }
+    ],
+    "react/no-array-index-key": 0,
+    "react/jsx-max-props-per-line": [
+      2,
+      {
+        "maximum": 2,
+        "when": "multiline"
+      }
+    ],
+    "camelcase": 0,
+    "react/prop-types": 0,
+    "react/display-name": 0,
+    "jsx-a11y/media-has-caption": 0,
+    "jsx-a11y/click-events-have-key-events":0,
+    "react/no-unescaped-entities": 0,
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": 1,
+    "react/no-danger": 0,
+    "no-shadow": "off",
+    "no-underscore-dangle": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      1,
+      "after-props"
+    ],
+    "react-hooks/exhaustive-deps": "off",
+    "max-classes-per-file": 0,
+    "jsx-a11y/anchor-is-valid": [
+      "off",
+      {
+        "components": [
+          "Link"
+        ]
+      }
+    ]
+  }
+}

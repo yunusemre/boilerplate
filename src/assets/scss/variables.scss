@@ -1,0 +1,73 @@
+$fontPrimary: "Optima", Helvetica, Arial, sans-serif !important;
+$borderRadius: 4px;
+
+$fontSizeBody: 13px;
+$lineHeightBody: 23px;
+
+$fontSizeH1: 30px;
+$lineHeightH1: 2rem;
+
+$fontSizeH2: 24px;
+$lineHeightH2: 2rem;
+
+$fontSizeH3: 22px;
+$lineHeightH3: 2rem;
+
+$fontSizeH4: 16px;
+$lineHeightH4: 2rem;
+
+$fontSizeH5: 15px;
+$lineHeightH5: 2rem;
+
+$fontSizeH6: 12px;
+$lineHeightH6: 2rem;
+
+// Typo
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 0.89;
+  font-weight: 300;
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+h1 {
+  font-size: $fontSizeH1;
+  line-height: $lineHeightH1;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: $fontSizeH2;
+  line-height: $lineHeightH2;
+}
+
+h3 {
+  font-size: $fontSizeH3;
+  line-height: $lineHeightH3;
+}
+
+h4 {
+  font-size: $fontSizeH4;
+  line-height: $lineHeightH4;
+}
+
+h5 {
+  font-size: $fontSizeH5;
+  line-height: $lineHeightH5;
+}
+
+h6 {
+  font-size: $fontSizeH6;
+  line-height: $lineHeightH6;
+}

@@ -1,0 +1,10 @@
+@import "normalize";
+@import "variables";
+@import "helper";
+
+body {
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
