@@ -18,7 +18,6 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "eject": "react-app-rewired eject",
-    "dev": "webpack-dev-server --mode=development",
     "eslint": "eslint '**/*.jsx' '**/*.js'"
   },
   "husky": {
