@@ -22,8 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run eslint && git add",
-      "pre-push": "npm run eslint"
+      "pre-commit": "npm run eslint && git add"
     }
   },
   "dependencies": {
