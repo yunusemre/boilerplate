@@ -1,24 +1,21 @@
 import React from 'react';
-import { StackedColumn } from '@ant-design/charts';
+import { Column } from '@ant-design/charts';
 
 const CO = ({ data }) => {
   const config = {
-    meta: {
-      value: { alias: 'Proportion of HCC Cases Detected(%)' },
-    },
     forceFit: true,
     data,
-    stackField: 'type',
-    color: ['#e1e1e1', '#b3b3b3', '#666'],
-    padding: 'auto',
+    isStack: true,
     xField: 'year',
     yField: 'value',
+    seriesField: 'type',
+    color: ['#e1e1e1', '#b3b3b3', '#666'],
   };
   return (
     <>
       <div className="chart-wrapper">
         <h5 className="bold chart-title">Clinical Outcomes</h5>
-        <StackedColumn {...config} />
+        <Column {...config} />
       </div>
     </>
   );

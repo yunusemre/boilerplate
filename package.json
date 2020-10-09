@@ -26,7 +26,7 @@
     }
   },
   "dependencies": {
-    "@ant-design/charts": "^0.9.13",
+    "@ant-design/charts": "^1.0.0",
     "antd": "^4.6.6",
     "axios": "0.20.0",
     "classnames": "^2.2.6",

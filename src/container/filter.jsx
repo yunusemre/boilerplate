@@ -21,7 +21,7 @@ const Filter = () => {
   console.log('filter');
   return (
     <Form onFinish={(form) => console.log(form)} layout="vertical" name="filter">
-      <Collapse defaultActiveKey={['1']} ghost>
+      <Collapse defaultActiveKey={['1', '2']} ghost>
         <Panel header="POPULATION CHARACTERISTICS" key="1">
           <Form.Item>
             <Form.Item>
