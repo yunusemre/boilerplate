@@ -86,3 +86,132 @@ body {
     margin-bottom: 20px;
   }
 }
+
+// input
+.ant-input {
+  border-color: $button;
+  border-radius: 8px;
+  max-width: 250px;
+  width: 100%;
+}
+
+// switch
+.ant-switch {
+  border: 0;
+
+  .ant-switch-handle:before {
+    border: 1px solid $color !important;
+  }
+
+  &.ant-switch-checked {
+    .ant-switch-handle:before {
+      background-color: $product !important;
+    }
+  }
+}
+.ant-radio,
+.ant-checkbox {
+  &:hover {
+    .ant-checkbox-inner,
+    .ant-radio-inner {
+      border-color: $button;
+    }
+  }
+}
+
+// radio
+.ant-radio {
+  .ant-radio-inner {
+    border-color: $button;
+    &:after {
+      border: 1px solid $button !important;
+      background-color: $product;
+      top: 2px;
+      left: 2px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.ant-checkbox {
+  .ant-checkbox-inner {
+    border-color: $button;
+    background-color: white;
+  }
+  &.ant-checkbox-checked {
+    .ant-checkbox-inner {
+      &:after {
+        transform: none !important;
+        top: 2px;
+        left: 2px;
+        display: table;
+        border: 1px solid $button;
+        width: 10px;
+        height: 10px;
+        background: $product !important;
+      }
+    }
+  }
+}
+
+.ant-btn {
+  border: 1px solid $color;
+  border-radius: 8px;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color;
+    border-color: $color;
+  }
+}
+.ant-btn-primary {
+  background: $product;
+  color: black;
+  font-weight: bold;
+  border: 1px solid $color;
+  border-radius: 8px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $product;
+    border-color: $color;
+  }
+}
+
+.ant-slider {
+  .ant-slider-rail {
+    background-color: transparent;
+  }
+  .ant-slider-track {
+    background-color: $button;
+    opacity: 0.8;
+    position: absolute;
+    top: -2px;
+    height: 16px;
+  }
+  .ant-slider-handle {
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    border: solid 0.5px $color;
+    background-color: $product;
+  }
+  .ant-slider-dot {
+    border: 0;
+    top: -9px;
+    width: 1px;
+    height: 20px;
+    border-radius: 0 !important;
+    background: $color;
+    &:nth-child(n + 12) {
+      top: -4px;
+      height: 12px;
+    }
+  }
+  .ant-slider-mark-text {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+}
