@@ -4,7 +4,58 @@
 
 body {
   font-size: 12px;
+  background-color: $bg;
+  color: $color;
+  padding: 5px;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
+}
+
+.layout {
+  width: 100%;
+
+  .header {
+    padding: 10px 0;
+    border-bottom: 1px solid $color;
+  }
+
+  .header,
+  .footer,
+  .wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+
+  .content-wrapper {
+    width: 70%;
+  }
+  .side {
+    width: 30%;
+  }
+}
+
+.ant-tabs {
+  &.ant-tabs-top {
+    .ant-tabs-nav {
+      &:before {
+        border: 0;
+      }
+    }
+    .ant-tabs-tab {
+      &.ant-tabs-tab-active {
+        border-top: 5px solid $color;
+        .ant-tabs-tab-btn {
+          color: $color;
+        }
+      }
+    }
+  }
 }
