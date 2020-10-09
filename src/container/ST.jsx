@@ -17,7 +17,7 @@ const ST = ({ data }) => {
   return (
     <>
       <div className="chart-wrapper">
-        <h5 className="bold chart-title">Clinical Outcomes</h5>
+        <h5 className="bold chart-title">Summary Tables</h5>
         <StackedColumn {...config} />
       </div>
     </>

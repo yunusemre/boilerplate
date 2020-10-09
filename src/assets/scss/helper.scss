@@ -1,45 +1,4 @@
 // 0 to 10
-// T: Top, L: Left, R: Right, B: Bottom
-
-@for $i from 0 through 10 {
-  @each $position in ("T", "R", "L", "B") {
-    .m#{$position}#{$i*5} {
-      @if $position == "T" {
-        margin-top: #{$i * 5}px !important;
-      }
-      @if $position == "R" {
-        margin-right: #{$i * 5}px !important;
-      }
-      @if $position == "B" {
-        margin-bottom: #{$i * 5}px !important;
-      }
-      @if $position == "L" {
-        margin-left: #{$i * 5}px !important;
-      }
-    }
-    .p#{$position}#{$i*5} {
-      @if $position == "T" {
-        padding-top: #{$i * 5}px !important;
-      }
-      @if $position == "R" {
-        padding-right: #{$i * 5}px !important;
-      }
-      @if $position == "B" {
-        padding-bottom: #{$i * 5}px !important;
-      }
-      @if $position == "L" {
-        padding-left: #{$i * 5}px !important;
-      }
-    }
-  }
-  .p#{$i*5} {
-    padding: #{$i * 5}px;
-  }
-  .m#{$i*5} {
-    margin: #{$i * 5}px;
-  }
-}
-
 .text-center {
   text-align: center;
 }
@@ -49,90 +8,9 @@
 .text-right {
   text-align: right;
 }
-.text-justify {
-  text-align: justify;
-}
-.text-break {
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-.text-lowercase {
-  text-transform: lowercase;
-}
-.text-uppercase {
-  text-transform: uppercase;
-}
-.text-capitalize {
-  text-transform: capitalize;
-}
-
-.float-left {
-  float: left;
-}
-.float-rigth {
-  float: rigth;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-.overflow-auto {
-  overflow: auto;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
-
-.d-flex {
-  display: flex;
-}
-.d-block {
-  display: block;
-}
-.d-inline {
-  display: inline;
-}
-.d-none {
-  display: none;
-}
-
-.position-absolute {
-  position: absolute;
-}
-.position-relative {
-  position: relative;
-}
-.position-fixed {
-  position: fixed;
-}
-
-.border-radius {
-  border-radius: 4px;
-}
-
-.w-10 {
-  width: 10%;
-}
-.w-25 {
-  width: 25%;
-}
-.w-50 {
-  width: 50%;
-}
-.w-75 {
-  width: 75%;
-}
-.w-100 {
-  width: 100%;
-}
-.w-auto {
-  width: auto;
-}
-
 .bold {
   font-weight: bold;
-}
-.underline {
-  text-decoration: underline;
 }
