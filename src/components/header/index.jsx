@@ -15,7 +15,7 @@ const Header = () => (
 
         h2{
           margin-bottom: 0;
-          vertical-align: bottom;
+          padding-top: 10px;
         }
       }
     `}
