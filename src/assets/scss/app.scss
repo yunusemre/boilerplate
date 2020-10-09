@@ -101,10 +101,14 @@ body {
 
 // switch
 .ant-switch {
-  border: 0;
+  background: $button !important;
+  border: 1px solid $color !important;
 
-  .ant-switch-handle:before {
-    border: 1px solid $color !important;
+  .ant-switch-handle {
+    top: 1px;
+    &:before {
+      border: 1px solid $color !important;
+    }
   }
 
   &.ant-switch-checked {
@@ -113,6 +117,22 @@ body {
     }
   }
 }
+.switch-field {
+  .ant-form-item-control-input-content {
+    display: flex;
+
+    small {
+      position: relative;
+      top: 5px;
+      margin: 0 6px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 .ant-radio,
 .ant-checkbox {
   &:hover {
@@ -140,22 +160,34 @@ body {
 
 .ant-checkbox {
   .ant-checkbox-inner {
-    border-color: $button;
+    border: 1px solid $color !important;
     background-color: white;
+    border-radius: 4px;
   }
   &.ant-checkbox-checked {
     .ant-checkbox-inner {
+      border: 1px solid $color !important;
+      background: transparent !important;
       &:after {
         transform: none !important;
         top: 2px;
         left: 2px;
         display: table;
-        border: 1px solid $button;
+        border: 1px solid $color !important;
+        background: $product !important;
         width: 10px;
         height: 10px;
-        background: $product !important;
       }
     }
+  }
+}
+
+.checkbox-field {
+  .ant-checkbox-wrapper {
+    display: block;
+  }
+  .ant-checkbox-wrapper {
+    margin-left: 0 !important;
   }
 }
 
@@ -230,5 +262,14 @@ body {
   margin-bottom: 0 !important;
 }
 
-.side {
+.ant-collapse {
+  .ant-collapse-header {
+    padding: 10px 20px !important;
+    color: $htitle !important;
+    font-weight: bold;
+  }
+
+  .ant-collapse-arrow {
+    left: 0 !important;
+  }
 }
