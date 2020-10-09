@@ -21,21 +21,21 @@ const Filter = () => {
   return (
     <Form onFinish={(form) => console.log(form)} layout="vertical" name="filter">
       <Form.Item>
-        <h4>Title</h4>
+        <h4 className="mB0 htitle">POPULATION CHARACTERISTICS</h4>
         <Form.Item>
-          <h6 className="mB0">Title</h6>
+          <h6 className="mB0 bold">Commercial (%)</h6>
           <Form.Item name="field1">
             <Slider dots width={400} step={5} marks={marks} defaultValue={0} />
           </Form.Item>
         </Form.Item>
         <Form.Item>
-          <h6 className="mB0">Title</h6>
+          <h6 className="mB0 bold">Medicare (%)</h6>
           <Form.Item name="field2">
             <Slider dots width={400} step={5} marks={marks} defaultValue={0} />
           </Form.Item>
         </Form.Item>
         <Form.Item>
-          <h6 className="mB0">Title</h6>
+          <h6 className="mB0 bold">Medicaid (%)</h6>
           <Form.Item name="field3">
             <Slider dots width={400} step={5} marks={marks} defaultValue={0} />
           </Form.Item>

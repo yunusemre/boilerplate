@@ -198,23 +198,26 @@ body {
     top: -2px;
     height: 16px;
   }
+  .ant-slider-step {
+    left: 3px;
+  }
   .ant-slider-handle {
-    width: 16px;
-    height: 16px;
-    top: 3px;
+    width: 20px;
+    height: 20px;
+    top: 2px;
     border: solid 0.5px $color;
     background-color: $product;
   }
   .ant-slider-dot {
     border: 0;
-    top: -3px;
+    top: -8px;
     width: 1px;
-    height: 10px;
+    height: 22px;
     border-radius: 0 !important;
     background: $color;
     &:nth-child(n + 12) {
-      top: -4px;
-      height: 12px;
+      top: -3px;
+      height: 10px;
     }
   }
   .ant-slider-mark-text {
