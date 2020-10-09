@@ -15,7 +15,7 @@ body {
 
 .layout {
   width: 100%;
-
+  padding: 0 10px;
   .header {
     padding: 10px 0;
     border-bottom: 1px solid $color;
@@ -36,15 +36,18 @@ body {
 
   .content-wrapper {
     width: 70%;
+    padding-left: 50px;
   }
   .side {
     width: 30%;
+    padding-right: 50px;
   }
 
   @media (max-width: 768px) {
     display: block;
     .content-wrapper,
     .side {
+      padding: 0;
       width: 100%;
     }
   }
@@ -166,18 +169,22 @@ body {
   }
 }
 .ant-btn-primary {
-  background: $product;
-  color: black;
+  background: $product !important;
+  color: black !important;
   font-weight: bold;
-  border: 1px solid $color;
-  border-radius: 8px;
+  border: 1px solid $color !important;
+  border-radius: 8px !important;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $product;
+    background-color: lighten($product, 10%) !important;
     border-color: $color;
   }
+}
+
+.ant-slider-with-marks {
+  margin-bttom: 0 !important;
 }
 
 .ant-slider {
@@ -200,9 +207,9 @@ body {
   }
   .ant-slider-dot {
     border: 0;
-    top: -9px;
+    top: -3px;
     width: 1px;
-    height: 20px;
+    height: 10px;
     border-radius: 0 !important;
     background: $color;
     &:nth-child(n + 12) {
@@ -214,4 +221,10 @@ body {
     margin-top: 10px;
     font-size: 10px;
   }
+}
+.ant-form-item {
+  margin-bottom: 0 !important;
+}
+
+.side {
 }

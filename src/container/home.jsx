@@ -3,6 +3,7 @@ import { Tabs } from 'antd';
 import HCD from './HCD';
 import ST from './ST';
 import CO from './CO';
+import Filter from './filter';
 
 const { TabPane } = Tabs;
 const HCDData = [
@@ -75,7 +76,9 @@ const HCDData = [
 
 const HomePage = () => (
   <>
-    <div className="side">filter</div>
+    <div className="side">
+      <Filter />
+    </div>
     <div className="content-wrapper">
       <Tabs defaultActiveKey="1">
         <TabPane tab="HCC CASES DETECTED" key="1">
