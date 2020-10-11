@@ -24,6 +24,7 @@ const Header = () => (
             max-width: 1280px;
             width: 100%;
             margin: 0 auto;
+            padding-top: 5px;
           }
         }
       .header{
