@@ -21,9 +21,9 @@ const Header = () => (
           text-align: right;
 
           .content{
-            max-width: 1360px;
+            max-width: 1280px;
             width: 100%;
-            margin: o auto;
+            margin: 0 auto;
           }
         }
       .header{
