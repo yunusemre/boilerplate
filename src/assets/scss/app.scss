@@ -7,7 +7,6 @@ body {
   background-color: $bg !important;
   color: $color;
   font-display: $fontPrimary;
-  padding: 5px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,7 +15,6 @@ body {
 
 .layout {
   width: 100%;
-  padding: 0 10px;
   .header {
     padding: 10px 0;
     border-bottom: 1px solid $color;
@@ -26,6 +24,7 @@ body {
   .footer,
   .wrapper {
     max-width: 1280px;
+    padding: 0 10px;
     width: 100%;
     margin: 0 auto;
   }
