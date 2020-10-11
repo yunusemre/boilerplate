@@ -1,6 +1,6 @@
 /* eslint-disable object-curly-newline */
 import React from 'react';
-import { Form, Button, Slider, Collapse, Switch, Checkbox } from 'antd';
+import { Form, Button, Slider, Collapse, Switch, Checkbox, InputNumber } from 'antd';
 
 const { Panel } = Collapse;
 const marks = {
@@ -20,26 +20,26 @@ const marks = {
 const Filter = () => {
   console.log('filter');
   return (
-    <Form onFinish={(form) => console.log(form)} layout="vertical" name="filter">
+    <Form onFinish={(form) => console.log(form)} layout="inline" name="filter">
       <Collapse defaultActiveKey={['1', '2']} ghost>
         <Panel header="POPULATION CHARACTERISTICS" key="1">
           <Form.Item>
             <Form.Item>
               <h6 className="mB0 bold">Commercial (%)</h6>
               <Form.Item name="field1">
-                <Slider dots width={400} step={5} marks={marks} defaultValue={0} />
+                <Slider dots step={5} marks={marks} defaultValue={0} />
               </Form.Item>
             </Form.Item>
             <Form.Item>
               <h6 className="mB0 bold">Medicare (%)</h6>
               <Form.Item name="field2">
-                <Slider dots width={400} step={5} marks={marks} defaultValue={0} />
+                <Slider dots step={5} marks={marks} defaultValue={0} />
               </Form.Item>
             </Form.Item>
             <Form.Item>
               <h6 className="mB0 bold">Medicaid (%)</h6>
               <Form.Item name="field3">
-                <Slider dots width={400} step={5} marks={marks} defaultValue={0} />
+                <Slider dots step={5} marks={marks} defaultValue={0} />
               </Form.Item>
             </Form.Item>
           </Form.Item>
@@ -63,7 +63,27 @@ const Filter = () => {
           </Form.Item>
         </Panel>
         <Panel header="COSTS" key="4">
-          empty
+          <Form.Item name="field7" label="OncoGuard" className="input-field mB10">
+            <InputNumber
+              className="w-100"
+              defaultValue={1000}
+              formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              parser={(value) => value.replace(/\$\s?|(,*)/g, '')} />
+          </Form.Item>
+          <Form.Item name="field8" label="M. Resonance Imaging" className="input-field mB10">
+            <InputNumber
+              className="w-100"
+              defaultValue={1000}
+              formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              parser={(value) => value.replace(/\$\s?|(,*)/g, '')} />
+          </Form.Item>
+          <Form.Item name="field9" label="Ultrasound" className="input-field mB10">
+            <InputNumber
+              className="w-100"
+              defaultValue={1000}
+              formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              parser={(value) => value.replace(/\$\s?|(,*)/g, '')} />
+          </Form.Item>
         </Panel>
         <Panel header="ADHERENCE SCENARIOS" key="5">
           <Form.Item className="switch-field">

@@ -97,8 +97,18 @@ body {
   border-radius: 8px;
   max-width: 250px;
   width: 100%;
-}
 
+  .ant-input-number {
+    width: 200px !important;
+    margin-bttom: 5px;
+  }
+}
+.input-field {
+  .ant-form-item-control-input {
+    margin-bottom: 10px;
+    text-align: right;
+  }
+}
 // switch
 .ant-switch {
   background: $button !important;
@@ -263,6 +273,7 @@ body {
 }
 
 .ant-collapse {
+  width: 100%;
   .ant-collapse-header {
     padding: 10px 20px !important;
     color: $htitle !important;
