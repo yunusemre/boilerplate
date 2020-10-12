@@ -1,7 +1,7 @@
 /* eslint-disable object-curly-newline */
 import React, { useState } from 'react';
 import { Form, Button, Slider, Collapse, Tooltip, Checkbox, InputNumber, Radio } from 'antd';
-import { DownloadOutlined, FileOutlined } from '@ant-design/icons';
+import { DownloadOutlined, FileOutlined, ClearOutlined } from '@ant-design/icons';
 
 const { Panel } = Collapse;
 const marks = {
@@ -19,6 +19,7 @@ const marks = {
 };
 
 const Filter = () => {
+  const [form] = Form.useForm();
   const [total, setTotal] = useState(0);
   const [comparator, setComparator] = useState(0);
 
@@ -40,13 +41,7 @@ const Filter = () => {
   return (
     <Form
       onFinish={(form) => submitForm(form)}
-      initialValues={{
-        comparator: [],
-        disease: 'Overall',
-        'costs-oncoguard': 1000,
-        'costs-resonance': 100,
-        'costs-ultrasound': 1000,
-        adherence: 'Basecase' }}
+      form={form}
       name="filter">
       <Collapse defaultActiveKey={['1', '2']} ghost>
         <Panel
@@ -150,6 +145,7 @@ const Filter = () => {
         <Button htmlType="submit" className="mB20" type="primary">Calculate</Button>
         <Button className="other-buttons" icon={<DownloadOutlined />} />
         <Button className="other-buttons" icon={<FileOutlined />} />
+        <Button className="other-buttons" onClick={() => form.resetFields()} icon={<ClearOutlined />}>Clear Filter</Button>
       </Form.Item>
     </Form>
   );
