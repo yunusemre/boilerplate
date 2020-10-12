@@ -20,13 +20,20 @@ const marks = {
 
 const Filter = () => {
   const [total, setTotal] = useState(0);
+  const [comparator, setComparator] = useState(0);
 
   const submitForm = (form) => {
     const totalValue = form.population.commercial + form.population.medicare + form.population.medicaid === 100;
+    const comparatorValue = form.comparator.length > 0;
     if (!totalValue) {
       setTotal(true);
     } else {
       setTotal(false);
+    }
+    if (!comparatorValue) {
+      setComparator(true);
+    } else {
+      setComparator(false);
     }
   };
 
@@ -73,14 +80,15 @@ const Filter = () => {
         </Panel>
         <Panel
           header={<Tooltip title="COMPARATOR(?)">COMPARATOR(?)</Tooltip>} key="2">
-          <Form.Item
-            name="comparator" className="checkbox-field"
-            rules={[{ required: true, message: 'This field is required' }]}>
-            <Checkbox.Group>
-              <Checkbox value="No Surveillance">No Surveillance</Checkbox>
-              <Checkbox value="Ultrasound">Ultrasound</Checkbox>
-              <Checkbox value="Ultrasound + AFP">Ultrasound + AFP</Checkbox>
-            </Checkbox.Group>
+          <Form.Item className="checkbox-field">
+            {comparator ? <small className="bold total-message">This field is required</small> : ''}
+            <Form.Item name="comparator">
+              <Checkbox.Group>
+                <Checkbox value="No Surveillance">No Surveillance</Checkbox>
+                <Checkbox value="Ultrasound">Ultrasound</Checkbox>
+                <Checkbox value="Ultrasound + AFP">Ultrasound + AFP</Checkbox>
+              </Checkbox.Group>
+            </Form.Item>
           </Form.Item>
         </Panel>
         <Panel header={<Tooltip title="DISEASE STAGE(?)">DISEASE STAGE(?)</Tooltip>} key="3">
