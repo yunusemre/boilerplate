@@ -1,6 +1,6 @@
 /* eslint-disable object-curly-newline */
 import React, { useState } from 'react';
-import { Form, Button, Slider, Collapse, Checkbox, InputNumber, Radio } from 'antd';
+import { Form, Button, Slider, Collapse, Tooltip, Checkbox, InputNumber, Radio } from 'antd';
 import { DownloadOutlined, FileOutlined } from '@ant-design/icons';
 
 const { Panel } = Collapse;
@@ -41,8 +41,10 @@ const Filter = () => {
         'costs-ultrasound': 1000,
         adherence: 'Basecase' }}
       name="filter">
-      <Collapse defaultActiveKey={['1', '3']} ghost>
-        <Panel header="POPULATION CHARACTERISTICS" key="1">
+      <Collapse defaultActiveKey={['1', '2']} ghost>
+        <Panel
+          header={<Tooltip title="POPULATION CHARACTERISTICS(?)">POPULATION CHARACTERISTICS(?)</Tooltip>}
+          key="1">
           <Form.Item>
             {total ? <small className="bold total-message">Sum of 'Population Characteristics' should be 100%</small> : ''}
             <Form.Item>
@@ -69,7 +71,8 @@ const Filter = () => {
             </Form.Item>
           </Form.Item>
         </Panel>
-        <Panel header="COMPARATOR" key="3">
+        <Panel
+          header={<Tooltip title="COMPARATOR(?)">COMPARATOR(?)</Tooltip>} key="2">
           <Form.Item
             name="comparator" className="checkbox-field"
             rules={[{ required: true, message: 'This field is required' }]}>
@@ -80,7 +83,7 @@ const Filter = () => {
             </Checkbox.Group>
           </Form.Item>
         </Panel>
-        <Panel header="DISEASE STAGE" key="2">
+        <Panel header={<Tooltip title="DISEASE STAGE(?)">DISEASE STAGE(?)</Tooltip>} key="3">
           <Form.Item name="disease" className="radio-field">
             <Radio.Group>
               <Radio value="Overall">Overall</Radio>
@@ -88,7 +91,7 @@ const Filter = () => {
             </Radio.Group>
           </Form.Item>
         </Panel>
-        <Panel header="COSTS" key="4">
+        <Panel header={<Tooltip title="COSTS(?)">COSTS(?)</Tooltip>} key="4">
           <Collapse defaultActiveKey={['8']} className="collapse-in-collapse">
             <Panel header="Commercial" key="8">
               <Form.Item name="costs-oncoguard" label="OncoGuard" className="input-field mB10">
@@ -126,7 +129,7 @@ const Filter = () => {
             </Panel>
           </Collapse>
         </Panel>
-        <Panel header="ADHERENCE SCENARIOS" key="5">
+        <Panel header={<Tooltip title="ADHERENCE SCENARIOS(?)">ADHERENCE SCENARIOSSTAGE(?)</Tooltip>} key="5">
           <Form.Item name="adherence">
             <Radio.Group>
               <Radio value="Basecase">Basecase</Radio>
