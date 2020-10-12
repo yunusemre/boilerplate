@@ -20,8 +20,17 @@ body {
     border-bottom: 1px solid $color;
   }
 
+  .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: #00809f;
+    color: white;
+    padding: 3px 0;
+    text-align: center;
+  }
+
   .header,
-  .footer,
   .wrapper {
     max-width: 1280px;
     padding: 0 10px;
@@ -54,28 +63,18 @@ body {
 }
 
 .ant-tabs {
+  color: $color !important;
   &.ant-tabs-top {
-    .ant-tabs-nav {
-      &:before {
-        border: 0;
-      }
-    }
     .ant-tabs-ink-bar {
-      background: none;
+      top: 0px;
+      height: 5px !important;
+      background: $color !important;
     }
     .ant-tabs-tab {
-      height: 50px;
-      .ant-tabs-tab-btn {
-        padding: 5px 0 5px 0 !important;
-      }
       &.ant-tabs-tab-active {
         .ant-tabs-tab-btn {
-          padding: 0px 0 5px 0 !important;
-        }
-        background: transparent;
-        border-top: 5px solid $color;
-        .ant-tabs-tab-btn {
           color: $color;
+          font-weight: bold;
         }
       }
     }
@@ -142,22 +141,18 @@ body {
   }
 }
 
-.ant-radio,
-.ant-checkbox {
-  &:hover {
-    .ant-checkbox-inner,
-    .ant-radio-inner {
-      border-color: $button;
-    }
+// radio
+.ant-radio-group {
+  .ant-radio-wrapper {
+    display: block;
   }
 }
-
-// radio
 .ant-radio {
   .ant-radio-inner {
-    border-color: $button;
+    border: 1px solid $color !important;
+    border-color: $color;
     &:after {
-      border: 1px solid $button !important;
+      border: 1px solid $color !important;
       background-color: $product;
       top: 2px;
       left: 2px;
@@ -192,10 +187,12 @@ body {
 }
 
 .checkbox-field {
-  .ant-checkbox-wrapper {
+  .ant-checkbox-wrapper,
+  .ant-radio-wrapper {
     display: block;
   }
-  .ant-checkbox-wrapper {
+  .ant-checkbox-wrapper,
+  .ant-radio-wrapper {
     margin-left: 0 !important;
   }
 }
@@ -272,6 +269,24 @@ body {
 }
 
 .ant-collapse {
+  .collapse-in-collapse {
+    border-radius: 4px;
+    .ant-collapse-header {
+      background: $button;
+    }
+    .ant-form-item-label {
+      label {
+        font-size: 12px;
+      }
+    }
+    .ant-collapse-content {
+      background: #e0f3f7;
+    }
+    .ant-collapse-arrow {
+      left: 5px !important;
+    }
+  }
+
   width: 100%;
   .ant-collapse-header {
     padding: 10px 20px !important;
@@ -282,4 +297,14 @@ body {
   .ant-collapse-arrow {
     left: 0 !important;
   }
+}
+
+.total-message {
+  color: #ff4d4f;
+}
+.other-buttons {
+  margin-left: 10px;
+  background: #c6e7ed !important;
+  border: 1px solid $color !important;
+  border-radius: 8px !important;
 }

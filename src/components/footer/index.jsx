@@ -1,9 +1,13 @@
 import React from 'react';
 
 const Footer = () => (
-  <p className="footer text-center">
-    <small>© Copyright | All rights reserved</small>
-  </p>
+  <>
+    <div className="footer">
+      <div className="footer-content">
+        <small>© 2020 Exact Sciences | All rights reserved</small>
+      </div>
+    </div>
+  </>
 );
 
 export default Footer;
