@@ -65,21 +65,18 @@ const Filter = () => {
         <Panel header="COSTS" key="4">
           <Form.Item name="field7" label="OncoGuard" className="input-field mB10">
             <InputNumber
-              className="w-100"
               defaultValue={1000}
               formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               parser={(value) => value.replace(/\$\s?|(,*)/g, '')} />
           </Form.Item>
           <Form.Item name="field8" label="M. Resonance Imaging" className="input-field mB10">
             <InputNumber
-              className="w-100"
               defaultValue={1000}
               formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               parser={(value) => value.replace(/\$\s?|(,*)/g, '')} />
           </Form.Item>
           <Form.Item name="field9" label="Ultrasound" className="input-field mB10">
             <InputNumber
-              className="w-100"
               defaultValue={1000}
               formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               parser={(value) => value.replace(/\$\s?|(,*)/g, '')} />

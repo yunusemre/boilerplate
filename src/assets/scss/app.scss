@@ -96,11 +96,11 @@ body {
   border-radius: 8px;
   max-width: 250px;
   width: 100%;
-
-  .ant-input-number {
-    width: 200px !important;
-    margin-bttom: 5px;
-  }
+}
+.ant-input-number {
+  min-width: 105px !important;
+  border-radius: 4px !important;
+  border: 1px solid $color !important;
 }
 .input-field {
   .ant-form-item-control-input {
