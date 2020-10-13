@@ -1,24 +1,59 @@
 import React from 'react';
-import { Column } from '@ant-design/charts';
+import { Table } from 'antd';
 
-const ST = ({ data }) => {
-  const config = {
-    forceFit: true,
-    data,
-    isStack: true,
-    xField: 'year',
-    yField: 'value',
-    seriesField: 'type',
-    color: ['#98ccd9', '#9b9ff9', '#b1d4f5'],
-  };
-  return (
-    <>
-      <div className="chart-wrapper">
-        <h5 className="bold chart-title">Summary Tables(%)</h5>
-        <Column {...config} />
-      </div>
-    </>
-  );
-};
+const columns2 = [
+  {
+    title: '',
+    dataIndex: 'title',
+  },
+  {
+    title: 'No of liver biopsies',
+    sorter: (a, b) => a.hcc - b.hcc,
+    dataIndex: 'hcc',
+    id: 1,
+  }, {
+    title: 'No. Screening Test',
+    dataIndex: 'lhcc',
+    sorter: (a, b) => a.lhcc - b.lhcc,
+    id: 2,
+  }, {
+    title: 'No of Diagnostic Test',
+    id: 3,
+    dataIndex: 'total',
+    sorter: (a, b) => a.total - b.total,
+  },
+];
+
+const Data2 = [
+  {
+    title: 'No Surveillance',
+    hcc: 33,
+    lhcc: 43,
+    total: 5,
+  },
+  {
+    title: 'Ultrasound',
+    hcc: 12,
+    lhcc: 43,
+    total: 14,
+  },
+  {
+    title: 'Oncoguard',
+    hcc: 1562,
+    lhcc: 56,
+    total: 34,
+  },
+];
+const ST = () => (
+  <div className="table mB20">
+    <h4 className="bold">Lifetime Number of Screening/Diagnostic Test Neede per 100,000 cirrhotic patients</h4>
+    <Table
+      bordered
+      rowKey="hcc"
+      columns={columns2}
+      pagination={false}
+      dataSource={Data2} />
+  </div>
+);
 
 export default ST;
