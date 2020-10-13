@@ -25,7 +25,7 @@ const Filter = () => {
 
   const submitForm = (form) => {
     const totalValue = form.population.commercial + form.population.medicare + form.population.medicaid === 100;
-    const comparatorValue = form.comparator.length > 0;
+    const comparatorValue = form.comparator?.length > 0;
     if (!totalValue) {
       setTotal(true);
     } else {
