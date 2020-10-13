@@ -139,7 +139,7 @@ const HCD = ({ data }) => {
           dataSource={Data1} />
       </div>
       <div className="table mB20">
-        <h4 className="bold">Lifetime Number of Screening/Diagnostic Test Neede per 100,000 cirrhotic patients</h4>
+        <h4 className="bold">Lifetime Number of Screening/Diagnostic Test Needed per 100,000 cirrhotic patients</h4>
         <Table
           bordered
           rowKey="hcc"
