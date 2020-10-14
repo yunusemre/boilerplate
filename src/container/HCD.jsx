@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'antd';
 import { Column } from '@ant-design/charts';
+import { mobile } from 'config/helper';
 
 const columns1 = [
   {
@@ -8,7 +9,6 @@ const columns1 = [
     children: [
       {
         dataIndex: 'title',
-        fixed: 'right',
       },
       {
         title: 'Early-HCC',
@@ -138,6 +138,7 @@ const HCD = ({ data }) => {
           rowKey="hcc"
           columns={columns1}
           pagination={false}
+          scroll={{ x: mobile ? 800 : '100%' }}
           dataSource={Data1} />
       </div>
       <div className="table mB20">
@@ -147,6 +148,7 @@ const HCD = ({ data }) => {
           rowKey="hcc"
           columns={columns2}
           pagination={false}
+          scroll={{ x: mobile ? 800 : '100%' }}
           dataSource={Data2} />
       </div>
     </>
