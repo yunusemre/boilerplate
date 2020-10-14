@@ -315,3 +315,34 @@ body {
   border: 1px solid $color !important;
   border-radius: 8px !important;
 }
+
+.ant-table {
+  display: block;
+
+  @media screen and (max-width: 768px) {
+    &-thead {
+      display: none;
+    }
+
+    &-thead > tr,
+    &-tbody > tr {
+      th,
+      td {
+        padding: 3px 10px;
+      }
+
+      > th,
+      > td {
+        display: block;
+        width: auto !important;
+        border: none;
+        padding: 0 1rem;
+        font-size: 1.1rem;
+
+        &:last-child {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+}

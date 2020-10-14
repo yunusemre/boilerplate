@@ -8,6 +8,7 @@ const columns1 = [
     children: [
       {
         dataIndex: 'title',
+        fixed: 'right',
       },
       {
         title: 'Early-HCC',
@@ -29,6 +30,7 @@ const columns1 = [
   },
   {
     title: 'No of cases detected survelliance',
+    fixed: 'right',
     children: [
       {
         title: 'Early-HCC',
