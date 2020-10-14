@@ -6,26 +6,22 @@ const columns2 = [
   {
     title: '',
     dataIndex: 'title',
-    responsive: ['xs', 'sm', 'lg', 'md'],
   },
   {
     title: 'No of liver biopsies',
     sorter: (a, b) => a.hcc - b.hcc,
     dataIndex: 'hcc',
     id: 1,
-    responsive: ['xs', 'sm', 'lg', 'md'],
   }, {
     title: 'No. Screening Test',
     dataIndex: 'lhcc',
     sorter: (a, b) => a.lhcc - b.lhcc,
     id: 2,
-    responsive: ['xs', 'sm', 'lg', 'md'],
   }, {
     title: 'No of Diagnostic Test',
     id: 3,
     dataIndex: 'total',
     sorter: (a, b) => a.total - b.total,
-    responsive: ['xs', 'sm', 'lg', 'md'],
   },
 ];
 
