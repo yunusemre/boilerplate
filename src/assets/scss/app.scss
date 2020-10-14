@@ -319,7 +319,7 @@ body {
 .ant-table {
   display: block;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 600px) {
     &-thead {
       display: none;
     }
@@ -328,7 +328,13 @@ body {
     &-tbody > tr {
       th,
       td {
-        padding: 3px 10px;
+        &:first-of-type {
+          padding-top: 1rem;
+        }
+
+        &:last-of-type {
+          padding-bottom: 1rem;
+        }
       }
 
       > th,
