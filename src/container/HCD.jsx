@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'antd';
 import { Column } from '@ant-design/charts';
-import { mobile } from 'config/helper';
+import mobile from 'config/helper';
 
 const columns1 = [
   {

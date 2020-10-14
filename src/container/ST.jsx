@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'antd';
-import { mobile } from 'config/helper';
+import mobile from 'config/helper';
 
 const columns2 = [
   {
